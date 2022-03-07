@@ -1,5 +1,7 @@
-main.c
 *.a
 *.o
-tester/
+
+# will comment out after submit
 *.md
+tester/
+main.c
