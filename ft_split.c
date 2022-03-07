@@ -5,20 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 12:27:41 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/07 16:58:38 by ssukwatt         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 01:42:48 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/07 12:24:30 by ssukwatt         ###   ########.fr       */
+/*   Created: 2022/03/08 01:20:09 by ssukwatt          #+#    #+#             */
+/*   Updated: 2022/03/08 01:20:17 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +29,7 @@ static int	algorithm(char const *s, char c, char **str_array, size_t len)
 		len_word = i;
 		while (s[len_word] != c && s[len_word] != '\0')
 			len_word++;
-		str_word = calloc(len_word - i + 1, sizeof(char));
+		str_word = ft_calloc(len_word - i + 1, sizeof(char));
 		if (str_word == NULL)
 			return (0);
 		len_word = 0;

@@ -6,7 +6,7 @@
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 00:19:38 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/07 00:32:30 by ssukwatt         ###   ########.fr       */
+/*   Updated: 2022/03/08 01:19:48 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	size_t	i;
 
-	str = calloc(ft_strlen(s) + 1, 1);
+	str = ft_calloc(ft_strlen(s) + 1, 1);
 	if (str == NULL)
 		return (NULL);
 	i = 0;

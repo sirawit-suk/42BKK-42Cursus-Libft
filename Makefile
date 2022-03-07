@@ -33,7 +33,7 @@ m:
 	gcc main.c -L . -lft && ./a.out
 check:
 	@echo "\n";
-	@norminette -R CheckForbiddenSourceHeader ft_*.c; 
+	@norminette -R CheckForbiddenSourceHeader ft_*.c *.h;
 	@echo "";
 	@echo "----------------------";
 rename:

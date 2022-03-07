@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 03:06:16 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/07 16:23:02 by ssukwatt         ###   ########.fr       */
+/*   Created: 2022/03/08 00:10:13 by ssukwatt          #+#    #+#             */
+/*   Updated: 2022/03/08 00:10:15 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	c = c % 256;
-	len = ft_strlen(s) + 1;
+	len = ft_strlen(s);
 	while (len >= 0)
 	{
 		if (s[len] == c)
-		{
 			return ((char *)s + len);
-		}
 		if (len == 0)
 			break ;
 		len--;

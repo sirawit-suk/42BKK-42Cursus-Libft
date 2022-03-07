@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 22:41:08 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/06 01:11:21 by ssukwatt         ###   ########.fr       */
+/*   Created: 2022/03/08 00:10:52 by ssukwatt          #+#    #+#             */
+/*   Updated: 2022/03/08 00:10:58 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*str;
-	size_t				i;
+	const char	*str;
+	size_t		i;
 
 	str = s;
 	i = 0;

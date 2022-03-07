@@ -1,6 +1,6 @@
 *.a
 *.o
-*.out
+#a.out
 
 # will add after submission completed
 *.md
