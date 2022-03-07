@@ -1,7 +1,9 @@
 *.a
 *.o
+*.out
 
-# will comment out after submit
+# will add after submission completed
 *.md
-tester/
+tester*/
 main.c
+venv/
