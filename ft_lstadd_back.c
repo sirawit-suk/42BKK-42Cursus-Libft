@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 01:40:37 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/08 17:43:42 by ssukwatt         ###   ########.fr       */
+/*   Created: 2022/03/08 23:47:52 by ssukwatt          #+#    #+#             */
+/*   Updated: 2022/03/09 01:01:04 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (c >= 'a' && c <= 'z')
+	t_list	*temp;
+
+	if (new == NULL)
+		return ;
+	if (*lst == NULL)
 	{
-		c -= 32;
+		*lst = new;
+		return ;
 	}
-	return (c);
+	temp = *lst;
+	while (temp->next != NULL)
+	{
+		temp = temp -> next;
+	}
+	temp -> next = new;
 }

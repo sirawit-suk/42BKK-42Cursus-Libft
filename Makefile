@@ -11,27 +11,39 @@ LIBC = $(IS_LIBC) $(TO_LIBC) $(STR_LIBC) $(MEM_LIBC)
 # part 2
 STR_ADDC = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
 PUT_ADDC = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-#BONUS_ADDC =
 ADDC = $(STR_ADDC) $(PUT_ADDC)
-SRCS = $(LIBC) $(ADDC) $(BONUS_ADDC)
+
+SRCS = $(LIBC) $(ADDC)
 OBJS = $(SRCS:.c=.o)
+
 NAME = libft.a
 RM = rm -rf
 
 # bonus part
+BONUS_ADDC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+
+BONUS_SRCS = $(BONUS_ADDC)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
+bonus: $(NAME) $(BONUS_OBJS)
+	ar -rcs $(NAME) $(BONUS_OBJS)
+
 $(NAME): $(OBJS)
-	ar -rcs $@ $^
+	ar -rcs $(NAME) $(OBJS)
+# ar -rcs $@ $^
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 fclean: clean
 	$(RM) $(NAME)
 re: fclean all
 
+mm:
+	gcc main.c -L . -lft && valgrind ./a.out
 m:
 	gcc main.c -L . -lft && ./a.out
 check:

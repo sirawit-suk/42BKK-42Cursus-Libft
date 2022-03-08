@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 01:40:37 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/08 17:43:42 by ssukwatt         ###   ########.fr       */
+/*   Created: 2022/03/08 23:42:43 by ssukwatt          #+#    #+#             */
+/*   Updated: 2022/03/09 00:58:44 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 'a' && c <= 'z')
+	if (lst == NULL)
+		return (lst);
+	while (lst -> next != NULL)
 	{
-		c -= 32;
+		lst = lst -> next;
 	}
-	return (c);
+	return (lst);
 }
