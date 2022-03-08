@@ -6,7 +6,7 @@
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 01:30:46 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/05 01:38:36 by ssukwatt         ###   ########.fr       */
+/*   Updated: 2022/03/08 12:01:17 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char	temp;
-
-	temp = c;
 	if (c >= 'A' && c <= 'Z')
 	{
-		temp += 32;
+		c += 32;
 	}
-	return (temp);
+	return (c);
 }

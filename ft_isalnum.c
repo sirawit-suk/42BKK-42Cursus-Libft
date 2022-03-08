@@ -6,7 +6,7 @@
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 01:54:55 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/02/16 02:07:45 by ssukwatt         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:52:53 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-	{
 		return (1);
-	}
 	return (0);
 }

@@ -1,6 +1,7 @@
+# Don't forget to get gitignore out before submit
 *.a
 *.o
-#a.out
+*.out
 
 # will add after submission completed
 *.md

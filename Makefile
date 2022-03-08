@@ -9,18 +9,21 @@ MEM_LIBC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp
 LIBC = $(IS_LIBC) $(TO_LIBC) $(STR_LIBC) $(MEM_LIBC)
 
 # part 2
-STR_ADDC = ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c
-ADDC = $(STR_ADDC)
-SRCS = $(LIBC) $(ADDC)
+STR_ADDC = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
+PUT_ADDC = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+#BONUS_ADDC =
+ADDC = $(STR_ADDC) $(PUT_ADDC)
+SRCS = $(LIBC) $(ADDC) $(BONUS_ADDC)
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a
 RM = rm -rf
+
+# bonus part
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $@ $^
-	ranlib $@
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 clean:
@@ -38,3 +41,6 @@ check:
 	@echo "----------------------";
 rename:
 	@sed 's/$(OLD)/$(NEW)/g' $(OLD).c > $(NEW).c
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)

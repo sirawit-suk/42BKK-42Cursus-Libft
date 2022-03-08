@@ -6,12 +6,11 @@
 /*   By: ssukwatt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 01:20:09 by ssukwatt          #+#    #+#             */
-/*   Updated: 2022/03/08 01:20:17 by ssukwatt         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:27:48 by ssukwatt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	algorithm(char const *s, char c, char **str_array, size_t len)
 {
