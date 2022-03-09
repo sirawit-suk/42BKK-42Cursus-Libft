@@ -2,9 +2,10 @@
 *.a
 *.o
 *.out
+venv/
+# because has .git inside
+tester*/
 
 # will add after submission completed
-*.md
-tester*/
-main.c
-venv/
+# *.md
+# main.c
