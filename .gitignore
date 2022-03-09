@@ -2,6 +2,7 @@
 *.a
 *.o
 *.out
+.gitignore
 
 # will add after submission completed
 *.md
